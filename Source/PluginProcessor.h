@@ -58,9 +58,12 @@ public:
 
     int getNumSamplerSounds() { return mSampler.getNumSounds(); }
 
+    juce::AudioBuffer<float>& getWaveForm() { return mWaveForm; }
+
 private:
     juce::Synthesiser mSampler;
     const int mNumVoices{ 3 };
+    juce::AudioBuffer<float> mWaveForm;
 
     juce::AudioFormatManager mFormatManager;
     juce::AudioFormatReader* mFormatReader{ nullptr };
